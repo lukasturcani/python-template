@@ -1,9 +1,9 @@
 def foo(a: int) -> str:
-    """
-    Do stuff.
+    """Do stuff.
 
     Parameters:
         a: A number.
+
     Returns:
         A message for you.
     """
