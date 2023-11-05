@@ -17,7 +17,6 @@ description = "Does things for you."
 
 [project.optional-dependencies]
 dev = [
-  "black",
   "ruff",
   "mypy",
   "pytest",
@@ -38,9 +37,6 @@ documentation = "https://millie.readthedocs.io"
 [tool.ruff]
 line-length = 79
 extend-select = ["I"]
-
-[tool.black]
-line-length = 79
 
 [tool.mypy]
 show_error_codes = true
