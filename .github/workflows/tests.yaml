@@ -15,7 +15,7 @@ jobs:
           python-version: "3.11"
           cache: "pip"
       - run: pip install -e '.[dev]'
-      - run: ruff .
+      - run: ruff src/ tests/ docs/source/
   mypy:
     runs-on: ubuntu-22.04
     steps:
@@ -25,7 +25,7 @@ jobs:
           python-version: "3.11"
           cache: "pip"
       - run: pip install -e '.[dev]'
-      - run: mypy .
+      - run: mypy src/ tests/ docs/source/
   ruff-format:
     runs-on: ubuntu-22.04
     steps:
@@ -35,7 +35,7 @@ jobs:
           python-version: "3.11"
           cache: "pip"
       - run: pip install -e '.[dev]'
-      - run: ruff format --check .
+      - run: ruff format --check src/ tests/ docs/source/
   pytest:
     runs-on: ubuntu-22.04
     steps:

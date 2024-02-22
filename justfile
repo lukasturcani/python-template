@@ -20,13 +20,13 @@ check:
   trap error=1 ERR
 
   echo
-  (set -x; ruff . )
+  (set -x; ruff src/ tests/ docs/source/ )
 
   echo
-  ( set -x; ruff format --check . )
+  ( set -x; ruff format --check src/ tests/ docs/source/ )
 
   echo
-  ( set -x; mypy . )
+  ( set -x; mypy src/ tests/ docs/source/ )
 
   echo
   ( set -x; pytest --cov=src --cov-report term-missing )
@@ -38,8 +38,8 @@ check:
 
 # Auto-fix code issues.
 fix:
-  ruff format .
-  ruff --fix .
+  ruff format src/ tests/ docs/source/
+  ruff --fix src/ tests/ docs/source/
 
 # Build a release.
 build:
