@@ -20,7 +20,7 @@ check:
   trap error=1 ERR
 
   echo
-  (set -x; ruff src/ tests/ docs/source/ )
+  (set -x; ruff check src/ tests/ docs/source/ )
 
   echo
   ( set -x; ruff format --check src/ tests/ docs/source/ )
@@ -39,7 +39,7 @@ check:
 # Auto-fix code issues.
 fix:
   ruff format src/ tests/ docs/source/
-  ruff --fix src/ tests/ docs/source/
+  ruff check --fix src/ tests/ docs/source/
 
 # Build a release.
 build:
