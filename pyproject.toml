@@ -56,6 +56,9 @@ convention = "google"
   "S101",
   "INP001",
 ]
+"examples/*" = [
+  "INP001",
+]
 "docs/source/conf.py" = ["D100", "INP001"]
 
 [tool.mypy]
