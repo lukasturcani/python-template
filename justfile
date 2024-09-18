@@ -21,18 +21,23 @@ check:
 
   echo
   (set -x; ruff check src/ tests/ docs/source/ examples/ )
+  test $? = 0
 
   echo
   ( set -x; ruff format --check src/ tests/ docs/source/ examples/ )
+  test $? = 0
 
   echo
   ( set -x; mypy src/ tests/ docs/source/ examples/ )
+  test $? = 0
 
   echo
   ( set -x; pytest --cov=src --cov-report term-missing )
+  test $? = 0
 
   echo
   ( set -x; make -C docs doctest )
+  test $? = 0
 
   test $error = 0
 
