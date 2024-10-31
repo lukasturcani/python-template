@@ -48,4 +48,4 @@ fix:
 
 # Build a release.
 build:
-  python -m build
+  uv build
