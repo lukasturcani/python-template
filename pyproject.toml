@@ -16,6 +16,8 @@ description = "Does things for you."
 
 [project.optional-dependencies]
 dev = [
+  "ruff",
+  "mypy",
   "pytest",
   "pytest-cov",
   "sphinx",
