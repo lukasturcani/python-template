@@ -10,7 +10,7 @@ docs:
 
 # Do a dev install.
 dev:
-  pip install -e '.[dev]'
+  uv sync --all-extras --dev
 
 # Run code checks.
 check:
@@ -48,4 +48,4 @@ fix:
 
 # Build a release.
 build:
-  python -m build
+  uv build
