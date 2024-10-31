@@ -70,4 +70,4 @@ jobs:
         with:
           python-version-file: "pyproject.toml"
       - run: uv sync --all-extras --dev
-      - run: make -C docs doctest
+      - run: uv run make -C docs doctest
