@@ -14,7 +14,7 @@ dynamic = ["version"]
 readme = "README.rst"
 description = "Does things for you."
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
   "ruff",
   "mypy",
