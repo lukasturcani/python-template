@@ -229,10 +229,10 @@ wheels = [
 
 [[package]]
 name = "millie"
-version = "0.1.dev20+g3d46ba8.d20241101"
+version = "0.1.dev24+ge00d8c6.d20241124"
 source = { editable = "." }
 
-[package.optional-dependencies]
+[package.dev-dependencies]
 dev = [
     { name = "furo" },
     { name = "mypy" },
@@ -244,14 +244,16 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "furo", marker = "extra == 'dev'" },
-    { name = "mypy", marker = "extra == 'dev'" },
-    { name = "pytest", marker = "extra == 'dev'" },
-    { name = "pytest-cov", marker = "extra == 'dev'" },
-    { name = "ruff", marker = "extra == 'dev'" },
-    { name = "sphinx", marker = "extra == 'dev'" },
-    { name = "sphinx-copybutton", marker = "extra == 'dev'" },
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "furo" },
+    { name = "mypy" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "ruff" },
+    { name = "sphinx" },
+    { name = "sphinx-copybutton" },
 ]
 
 [[package]]

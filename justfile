@@ -36,7 +36,7 @@ check:
   test $? = 0
 
   echo
-  ( set -x; uv run make -C docs doctest )
+  ( set -x; rm -rf docs/build docs/source/_autosummary; uv run make -C docs doctest )
   test $? = 0
 
   test $error = 0
