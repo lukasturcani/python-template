@@ -9,7 +9,7 @@ docs:
   echo Docs are in $PWD/docs/build/html/index.html
 
 # Do a dev install.
-dev:
+setup:
   uv sync --all-extras --dev
 
 # Run code checks.
