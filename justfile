@@ -49,3 +49,11 @@ fix:
 # Build a release.
 build:
   uv build
+
+# Initialize the repo.
+init repo-name:
+  for FILE in $(rg --files-with-matches millie); \
+  do \
+    sd millie {{repo-name}} $FILE; \
+  done
+  mv src/millie src/{{repo-name}}
